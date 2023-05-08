@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>경품</title>
+    <meta charset="utf-8">
+    <style>
+      body {
+        text-align: center;
+      }
+      #image-container {
+        display: none; /* 초기에는 이미지 숨기기 */
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+      }
+      #image {
+        max-width: 50%;
+        max-height: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="showImageAndMusic()" style="font-size: 60px; margin-top: 50px;">경품 받기</button>
+    <div id="image-container">
+      <img id="image" src="은혜.jpg" alt="이미지">
+    </div>
+    <audio id="music" src="어버이날 음악.mp3"></audio>
+    <script>
+      function showImageAndMusic() {
+        var imageContainer = document.getElementById('image-container');
+        imageContainer.style.display = 'flex'; // 이미지 보이기
+        
+        var music = document.getElementById('music');
+        music.play(); // 음악 재생
+      }
+    </script>
+  </body>
+
+</html>

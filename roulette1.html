@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>룰렛1</title>
+    <meta charset="utf-8">
+    <style>
+      body {
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+      }
+      .gif {
+        max-width: 50%;
+        max-height: 50%;
+      }
+      button {
+        margin-top: 120px;
+        margin-bottom: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="showGif()" style="font-size: 75px;"><strong>경품 추첨하기</strong></button>
+    <div class="container" style="display:none;">
+      <img id="gif" src="회전하는룰렛.gif" alt="룰렛 GIF">
+    </div>
+    <audio id="sound" src="꽝.mp3"></audio>
+    
+    <script>      
+      function showGif() {
+        const image = document.querySelector('.container');
+        image.style.display = 'flex';     
+
+        const stopImage = "꽝.jpg";
+        setTimeout(function() {
+            document.querySelector('#gif').src = stopImage;
+            sound.play();
+        }, 4000);
+    }
+    </script>
+    </body>
+</html>
